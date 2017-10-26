@@ -1,0 +1,16 @@
+<script src="./javascripts/list-js/modernizr.custom.js"></script>
+
+<ul class="grid cs-style-3">
+<div class="mainBack_box">
+			<li ng-repeat="ndata in toursData"  >
+				
+					<figure>
+						<img src="{{ndata.images.split(',')[0]}}" alt="img04">
+						<figcaption>
+							<h3>{{ndata.name}}</h3>
+							<a href="#/TOURS/{{ndata.id}}">More</a>
+						</figcaption>
+					</figure>
+				</li>
+				</div>
+</ul>

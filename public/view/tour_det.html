@@ -1,0 +1,123 @@
+<script>
+
+    $(function() {
+
+
+     
+        $("#slider1").responsiveSlides({
+            auto: true,
+            pager: true,
+            nav: true,
+            speed: 500,
+            timeout: 6000,
+            maxwidth: 1200,
+            namespace: "centered-btns"
+        });
+
+    });
+</script> 
+
+    <div class="mainBackImage" >
+        <ul class="rslides" id="slider2">
+                         <li><img src="./images/tour1.jpg" alt=""></li>
+                      </ul>
+    </div>
+
+ <div class="mainBack_box">
+
+        <div class="sliderCont">
+            <div id="wrapper">
+                <div class="rslides_container">
+                    <ul class="rslides" id="slider1" >
+               
+                        <li ><img src="{{ImgAr[0]}}" alt=""></li>
+
+        <li ><img src="{{ImgAr[1]}}" alt=""></li>
+        <li ><img src="{{ImgAr[2]}}" alt=""></li>
+                 
+                    </ul>
+                </div>
+               
+                
+          
+  
+        </div>
+
+  </div>
+       
+
+  </div>
+ <div class="mainBack_box">
+ <div class="textOver" > {{singleData.overview}}
+                </div>
+    
+        <div bn-fade-helper class="viewport">
+
+   <img
+            ng-src="{{image.tour_img}}"
+            title="{{image.tour_desc}}"
+            class="image"
+        />
+
+
+     <p class="caption">{{image.tour_desc}}</p>
+     {{states.activeItem}}
+   <ul class="nav">
+       <li><a ng-repeat="image in DetData"  ng-class="{'active': $index == states.activeItem}" ng-click="showImage($index)">{{$index+1}}.{{image.tour_name}}</a> </li> 
+
+    </ul>
+        </div>
+        </div>
+
+
+
+        <!-- Tour b section-->
+        <div class="mainBack_box">
+<ul class="ch-grid">
+    <li>
+        <div class="ch-item ch-img-1">
+            <div class="ch-info">
+                <h3>{{singleData.weather}}</h3>
+                <p>Weather</p>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="ch-item ch-img-2">
+            <div class="ch-info">
+                <h3>{{singleData.clothes}}</h3>
+                <p>Clothes</p>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="ch-item ch-img-3">
+            <div class="ch-info">
+                <h3>{{singleData.cars}}</h3>
+                <p>Cars</p>
+            </div>
+        </div>
+    </li>
+ 
+</ul>
+
+<ul class="ch-grid">
+       <li>
+        <div class="ch-item ch-img-4">
+            <div class="ch-info">
+                <h3>{{singleData.food}}</h3>
+                <p>Food</p>
+            </div>
+        </div>
+    </li>
+        <li>
+        <div class="ch-item ch-img-5">
+            <div class="ch-info">
+                <h3>{{singleData.camps}}</h3>
+                <p>Camps</p>
+            </div>
+        </div>
+    </li>
+</ul>
+
+     </div>
